@@ -11,6 +11,11 @@ import {
 } from '@stencil/router';
 
 export namespace Components {
+  interface AcmeApp {}
+  interface AcmeAppStructure {}
+  interface AcmeDemo {}
+  interface AcmeLoad {}
+  interface AcmePrivateModule {}
   interface AppHome {}
   interface AppProfile {
     'match': MatchResults;
@@ -20,6 +25,36 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLAcmeAppElement extends Components.AcmeApp, HTMLStencilElement {}
+  var HTMLAcmeAppElement: {
+    prototype: HTMLAcmeAppElement;
+    new (): HTMLAcmeAppElement;
+  };
+
+  interface HTMLAcmeAppStructureElement extends Components.AcmeAppStructure, HTMLStencilElement {}
+  var HTMLAcmeAppStructureElement: {
+    prototype: HTMLAcmeAppStructureElement;
+    new (): HTMLAcmeAppStructureElement;
+  };
+
+  interface HTMLAcmeDemoElement extends Components.AcmeDemo, HTMLStencilElement {}
+  var HTMLAcmeDemoElement: {
+    prototype: HTMLAcmeDemoElement;
+    new (): HTMLAcmeDemoElement;
+  };
+
+  interface HTMLAcmeLoadElement extends Components.AcmeLoad, HTMLStencilElement {}
+  var HTMLAcmeLoadElement: {
+    prototype: HTMLAcmeLoadElement;
+    new (): HTMLAcmeLoadElement;
+  };
+
+  interface HTMLAcmePrivateModuleElement extends Components.AcmePrivateModule, HTMLStencilElement {}
+  var HTMLAcmePrivateModuleElement: {
+    prototype: HTMLAcmePrivateModuleElement;
+    new (): HTMLAcmePrivateModuleElement;
+  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -39,6 +74,11 @@ declare global {
     new (): HTMLAppRootElement;
   };
   interface HTMLElementTagNameMap {
+    'acme-app': HTMLAcmeAppElement;
+    'acme-app-structure': HTMLAcmeAppStructureElement;
+    'acme-demo': HTMLAcmeDemoElement;
+    'acme-load': HTMLAcmeLoadElement;
+    'acme-private-module': HTMLAcmePrivateModuleElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
@@ -46,6 +86,11 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface AcmeApp {}
+  interface AcmeAppStructure {}
+  interface AcmeDemo {}
+  interface AcmeLoad {}
+  interface AcmePrivateModule {}
   interface AppHome {}
   interface AppProfile {
     'match'?: MatchResults;
@@ -53,6 +98,11 @@ declare namespace LocalJSX {
   interface AppRoot {}
 
   interface IntrinsicElements {
+    'acme-app': AcmeApp;
+    'acme-app-structure': AcmeAppStructure;
+    'acme-demo': AcmeDemo;
+    'acme-load': AcmeLoad;
+    'acme-private-module': AcmePrivateModule;
     'app-home': AppHome;
     'app-profile': AppProfile;
     'app-root': AppRoot;
@@ -65,6 +115,11 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'acme-app': LocalJSX.AcmeApp & JSXBase.HTMLAttributes<HTMLAcmeAppElement>;
+      'acme-app-structure': LocalJSX.AcmeAppStructure & JSXBase.HTMLAttributes<HTMLAcmeAppStructureElement>;
+      'acme-demo': LocalJSX.AcmeDemo & JSXBase.HTMLAttributes<HTMLAcmeDemoElement>;
+      'acme-load': LocalJSX.AcmeLoad & JSXBase.HTMLAttributes<HTMLAcmeLoadElement>;
+      'acme-private-module': LocalJSX.AcmePrivateModule & JSXBase.HTMLAttributes<HTMLAcmePrivateModuleElement>;
       'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
       'app-profile': LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
       'app-root': LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;

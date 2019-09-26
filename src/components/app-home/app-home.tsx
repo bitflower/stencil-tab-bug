@@ -9,16 +9,7 @@ export class AppHome {
   render() {
     return (
       <div class="app-home">
-        <ion-list>
-          <ion-item>
-            <ion-label>Hello</ion-label>
-            World
-          </ion-item>
-        </ion-list>
-
-        <stencil-route-link url="/profile/stencil">
-          <button>Profile page</button>
-        </stencil-route-link>
+        <stencil-route url="/" component="acme-private-module" exact={false} />
       </div>
     );
   }
