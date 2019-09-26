@@ -1,3 +1,6 @@
+import '@ionic/core';
+import '@stencil/router';
+
 export default async () => {
   /**
    * The code to be executed should be placed within a default function that is

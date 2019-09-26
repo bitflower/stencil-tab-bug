@@ -11,6 +11,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@ionic/core": "^4.9.1",
     "@stencil/core": "^1.5.1",
     "@stencil/router": "^1.0.1"
   },
