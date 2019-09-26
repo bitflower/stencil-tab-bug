@@ -9,7 +9,7 @@ export class AcmeAppStructure {
   render() {
     return (
       <Host>
-        <ion-split-pane content-id="case-content" when="(min-width: 1600px)">
+        <ion-split-pane content-id="case-content" when="(min-width: 400px)">
           <ion-menu
             content-id="case-content"
             side="start"
