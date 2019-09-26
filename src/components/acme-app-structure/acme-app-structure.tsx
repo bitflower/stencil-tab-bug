@@ -9,14 +9,13 @@ export class AcmeAppStructure {
   render() {
     return (
       <Host>
-        {/* <ion-list>
-          <ion-item>
-            <ion-label>Hello</ion-label>
-            World
-          </ion-item>
-        </ion-list> */}
         <ion-split-pane content-id="case-content" when="(min-width: 1600px)">
-          <ion-menu>
+          <ion-menu
+            content-id="case-content"
+            side="start"
+            swipeGesture={true}
+            type="overlay"
+          >
             <ion-header>
               <ion-toolbar>App Features</ion-toolbar>
             </ion-header>
