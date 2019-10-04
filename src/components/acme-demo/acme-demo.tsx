@@ -12,7 +12,7 @@ export class AcmeDemo {
         <ion-tabs>
           {this.renderTabBar()}
 
-          {/* COMMENT THESE ION-TABS OUT AND IT WILL RENDER! */}
+          {/* COMMENT THESE ION-TAB OUT AND IT WILL RENDER! */}
 
           <ion-tab tab="view">
             <ion-content>
@@ -30,7 +30,9 @@ export class AcmeDemo {
             </ion-content>
           </ion-tab>
           <ion-tab tab="viewContext">
-            <ion-content></ion-content>
+            <ion-content>
+              <h1>DDD</h1>
+            </ion-content>
           </ion-tab>
         </ion-tabs>
       </Host>
