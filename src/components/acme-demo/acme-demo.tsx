@@ -6,6 +6,17 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true
 })
 export class AcmeDemo {
+  // private tabsEl: HTMLIonTabsElement;
+
+  async componentDidLoad() {
+    // await this.tabsEl.componentOnReady();
+    // this.tabsEl.select('contentAtoms');
+    const tabs = document.querySelector('ion-tabs');
+    const selected = await tabs.getSelected();
+    if (selected) return;
+    tabs.select('contentAtoms');
+  }
+
   render() {
     return (
       <Host>
@@ -41,7 +52,7 @@ export class AcmeDemo {
 
   private renderTabBar() {
     return (
-      <ion-tab-bar slot="top" selectedTab="view">
+      <ion-tab-bar slot="top">
         <ion-tab-button tab="view">
           <ion-icon name="eye" />
           <ion-label>View</ion-label>
