@@ -11,8 +11,8 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@ionic/core": "^4.10.0",
-    "@stencil/core": "^1.5.3",
+    "@ionic/core": "^4.11.0",
+    "@stencil/core": "^1.7.1",
     "@stencil/router": "^1.0.1"
   },
   "license": "MIT"
